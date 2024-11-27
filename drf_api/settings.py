@@ -37,10 +37,10 @@ SECRET_KEY = 'django-insecure-_7fmdntipapc1-hvq2z0b!=&fc9zq*b=#8s6)$4@q-7o)f4^r#
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-lionelwise77-drfapi2-uiwrdixulxf.ws.codeinstitute-ide.net']
+    '8000-lionelwise77-drfapi2-ukfqpr9yfrd.ws.codeinstitute-ide.net']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-lionelwise77-drfapi2-uiwrdixulxf.ws.codeinstitute-ide.net',
+    'https://8000-lionelwise77-drfapi2-ukfqpr9yfrd.ws.codeinstitute-ide.net',
 ]
 
 
