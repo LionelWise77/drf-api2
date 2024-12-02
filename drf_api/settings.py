@@ -63,7 +63,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'moments-api.herokuapp.com']
+ALLOWED_HOSTS = ['8000-lionelwise77-drfapi2-ukfqpr9yfrd.ws.codeinstitute-ide.net', '127.0.0.1', 'moments-api-d93675faa1bb.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-lionelwise77-drfapi2-ukfqpr9yfrd.ws.codeinstitute-ide.net',
