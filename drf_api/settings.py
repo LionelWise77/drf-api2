@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import re
 
 if os.path.exists('env.py'):
     import env
@@ -63,7 +64,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-lionelwise77-drfapi2-ukfqpr9yfrd.ws.codeinstitute-ide.net', '127.0.0.1', 'moments-api-d93675faa1bb.herokuapp.com']
+ALLOWED_HOSTS = [ os.environ.get('moments-api-d93675faa1bb.herokuapp.com'),'8000-lionelwise77-drfapi2-ukfqpr9yfrd.ws.codeinstitute-ide.net',]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-lionelwise77-drfapi2-ukfqpr9yfrd.ws.codeinstitute-ide.net',
@@ -117,10 +118,10 @@ if 'CLIENT_ORIGIN' in os.environ:
      CORS_ALLOWED_ORIGINS = [
          os.environ.get('CLIENT_ORIGIN')
      ]
-else:
-     CORS_ALLOWED_ORIGIN_REGEXES = [
+if 'CLIENT_ORIGIN_DEV' in os.environ:
+    CORS_ALLOWED_ORIGIN_REGEXES = [
          r"^https:\/\/.*\.codeinstitute-ide\.net$",
-     ]
+    ]
      
 CORS_ALLOW_CREDENTIALS = True     
 
